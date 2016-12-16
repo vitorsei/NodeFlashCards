@@ -1,0 +1,23 @@
+{
+  "name": "orangeorapple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorsei/OrangeOrApple.git"
+  },
+  "author": "Vitor Seiji Iwamura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitorsei/OrangeOrApple/issues"
+  },
+  "homepage": "https://github.com/vitorsei/OrangeOrApple#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
