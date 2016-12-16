@@ -3,7 +3,6 @@
 //TDD
 //ESLint
 
-var Vocab = require('./src/vocab');
 var ReadFile = require('./src/fileService').readFile;
 var WriteFile = require('./src/fileService').writeFile;
 var vocabService = require('./src/vocabService')();
