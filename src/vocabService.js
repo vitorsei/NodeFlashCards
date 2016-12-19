@@ -10,8 +10,16 @@ var vocabService = function () {
             .trim();
     }
 
+    var IsNewWord = function (word) {
+        var regex = new RegExp('^[a-z]', 'gi');
+        return regex.test(word);
+    };
+
     var IsNewExplanation = function (string) {
-        return string.startsWith('\t')
+        if (string)
+            return string.startsWith('\t');
+
+        return false;
     };
 
     var ExtractExplanations = function (lines, i) {
@@ -22,11 +30,6 @@ var vocabService = function () {
         }
 
         return explanations;
-    };
-
-    var IsNewWord = function (word) {
-        var regex = new RegExp('^[a-z|\s]', 'gi');
-        return word.match(regex);
     };
 
     function FormatVocab(vocabs) {
@@ -58,7 +61,9 @@ var vocabService = function () {
 
     return {
         Sanitize: Sanitize,
+        IsNewWord: IsNewWord,
         IsNewExplanation: IsNewExplanation,
+        ExtractExplanations: ExtractExplanations,
         ExtractVocab: ExtractVocab
     };
 };

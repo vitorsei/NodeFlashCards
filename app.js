@@ -1,6 +1,5 @@
 //TODO:
 //use ES6
-//TDD
 //ESLint
 
 var ReadFile = require('./src/fileService').readFile;
