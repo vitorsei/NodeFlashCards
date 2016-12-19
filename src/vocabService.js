@@ -60,6 +60,7 @@ var vocabService = function () {
     }
 
     return {
+        Sanitize: Sanitize,
         ExtractVocab: ExtractVocab
     };
 };

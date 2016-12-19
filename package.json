@@ -19,5 +19,8 @@
   "homepage": "https://github.com/vitorsei/OrangeOrApple#readme",
   "dependencies": {
     "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2"
   }
 }
