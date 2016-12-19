@@ -9,6 +9,12 @@ describe('Vocab Services', function () {
             expect('This is a sentence.').toBe(sentenceSanitized);
         });
 
+        it('verifies explanations', function () {
+            var newExplanation = vocabService.IsNewExplanation('\t new explanation');
+            expect(newExplanation).toBe(true);
 
+            var notAExplanation = vocabService.IsNewExplanation(' not an explanation');
+            expect(notAExplanation).toBe(false);
+        });
     })
 });

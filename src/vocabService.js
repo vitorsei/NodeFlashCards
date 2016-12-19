@@ -1,4 +1,5 @@
 var Vocab = require('./vocab');
+var stringHelper = require('./stringHelper');
 
 var vocabService = function () {
     function Sanitize(string) {
@@ -9,12 +10,8 @@ var vocabService = function () {
             .trim();
     }
 
-    var IsNullOrWhiteSpace = function (string) {
-        return !/\S/.test(string);
-    };
-
     var IsNewExplanation = function (string) {
-        return string.startsWith('\t') || string.startsWith(' ');
+        return string.startsWith('\t')
     };
 
     var ExtractExplanations = function (lines, i) {
@@ -47,7 +44,7 @@ var vocabService = function () {
 
         var length = lines.length;
         for (var i = 0; i < length; i++) {
-            if (!IsNullOrWhiteSpace(lines[i])) {
+            if (!stringHelper.IsNullOrWhiteSpace(lines[i])) {
                 if (IsNewWord(lines[i])) {
                     word = Sanitize(lines[i]);
                     explanations = ExtractExplanations(lines, ++i);
@@ -61,6 +58,7 @@ var vocabService = function () {
 
     return {
         Sanitize: Sanitize,
+        IsNewExplanation: IsNewExplanation,
         ExtractVocab: ExtractVocab
     };
 };
