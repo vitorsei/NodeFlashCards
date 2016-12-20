@@ -1,5 +1,5 @@
 var expect = require('expect');
-var vocabService = require('../vocabService')();
+var vocabService = require('../services/vocabService')();
 
 describe('Vocab Services', function () {
     describe('Helper methods', function () {

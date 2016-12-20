@@ -1,5 +1,5 @@
 var expect = require('expect');
-var stringHelper = require('../stringHelper');
+var stringHelper = require('../helpers/stringHelper');
 
 describe('String Helper', function () {
     describe('Helper methods', function () {

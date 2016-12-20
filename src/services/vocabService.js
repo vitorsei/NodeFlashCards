@@ -1,5 +1,5 @@
-var Vocab = require('./vocab');
-var stringHelper = require('./stringHelper');
+var Vocab = require('./../models/vocab');
+var stringHelper = require('./../helpers/stringHelper');
 
 var vocabService = function () {
     function Sanitize(string) {
