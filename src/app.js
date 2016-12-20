@@ -1,29 +1,14 @@
 //TODO:
-//use ES6
-// How to debug ES6
+//How to debug ES6
+//How to use mocha with ES6
 //ESLint
 
-
-
-// var WriteFile = require('./services/fileService').writeFile;
-// var vocabService = require('./services/vocabService')();
-//
-// var entryPath = "D:\\Seiji\\Vocab\\EngVocab.txt";
-// var outputPath = "D:\\Seiji\\Vocab\\Test.txt";
-//
-
-// var vocabs = vocabService.ExtractVocab(lines);
-// WriteFile(outputPath, vocabs);
-
-// import {Vocab} from './models/vocab';
-//
-// let a = new Vocab('a', ['1', '2']);
-//
-// console.log(a);
-
 import {ReadFile, WriteFile} from './services/fileService';
+import vocabService from './services/vocabService';
 
 const entryPath = "D:\\Seiji\\Vocab\\EngVocab.txt";
-let lines = ReadFile(entryPath);
+const outputPath = "D:\\Seiji\\Vocab\\Test.txt";
 
-console.log(lines);
+const lines = ReadFile(entryPath);
+const vocabs = vocabService.ExtractVocab(lines);
+WriteFile(outputPath, vocabs);

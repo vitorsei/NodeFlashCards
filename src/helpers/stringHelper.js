@@ -1,7 +1,7 @@
-var stringHelper = {};
+class StringHelper {
+    static IsNullOrWhiteSpace(string) {
+        return !/\S/.test(string);
+    }
+}
 
-stringHelper.IsNullOrWhiteSpace = function (string) {
-    return !/\S/.test(string);
-};
-
-module.exports = stringHelper;
+export default StringHelper;
