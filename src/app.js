@@ -1,6 +1,3 @@
-//TODO:
-//ESLint
-
 import {ReadFile, WriteFile} from "./services/fileService";
 import VocabService from "./services/vocabService";
 
