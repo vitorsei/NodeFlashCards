@@ -13,5 +13,5 @@ describe('String Helper', () => {
             let notNull = StringHelper.IsNullOrWhiteSpace('not null');
             expect(notNull).toBe(false);
         });
-    })
+    });
 });

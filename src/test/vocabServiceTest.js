@@ -42,5 +42,5 @@ describe('Vocab Services', () => {
 
             expect(vocabs).toEqual(['term1\texp1||exp2', 'term2\texp1']);
         });
-    })
+    });
 });

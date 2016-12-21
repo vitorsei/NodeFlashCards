@@ -27,7 +27,7 @@ class VocabService {
     static IsNewWord(word) {
         let regex = new RegExp('^[a-z]', 'gi');
         return regex.test(word);
-    };
+    }
 
     /**
      * @return {string}
@@ -48,7 +48,7 @@ class VocabService {
         }
 
         return explanations;
-    };
+    }
 
     /**
      * @return {boolean}
@@ -70,8 +70,3 @@ class VocabService {
 }
 
 export default VocabService;
-
-
-
-
-
