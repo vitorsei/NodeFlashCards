@@ -1,16 +1,16 @@
-var expect = require('expect');
-var stringHelper = require('../helpers/stringHelper');
+import expect from 'expect';
+import StringHelper from '../helpers/stringHelper';
 
-describe('String Helper', function () {
-    describe('Helper methods', function () {
+describe('String Helper', () => {
+    describe('Helper methods', () => {
 
-        it('is true if the string is null or white space', function () {
-            var isNull = stringHelper.IsNullOrWhiteSpace('');
+        it('is true if the string is null or white space', () => {
+            let isNull = StringHelper.IsNullOrWhiteSpace('');
             expect(isNull).toBe(true);
         });
 
-        it('is false if the string is not null', function () {
-            var notNull = stringHelper.IsNullOrWhiteSpace('not null');
+        it('is false if the string is not null', () => {
+            let notNull = StringHelper.IsNullOrWhiteSpace('not null');
             expect(notNull).toBe(false);
         });
     })
